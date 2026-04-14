@@ -43,7 +43,7 @@ This project is a **scalable End-to-End (E2E) test automation framework** built 
 ### 1️⃣ Clone the repository
 
 ```
-git clone [<your-repo-url>](https://github.com/harsh-S21901/playwright-e2e-automation-framework.git)
+git clone "https://github.com/harsh-S21901/playwright-e2e-automation-framework.git"
 cd playwright-e2e-automation-framework
 ```
 
