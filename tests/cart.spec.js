@@ -14,5 +14,5 @@ test("User can add product to cart and verify it in cart", async ({ page }) => {
   await cartPage.addToCart(productName);
   await cartPage.openCart();
 
-  await cartPage.verifyOrderInCart(productName);
+  await cartPage.verifyProductInCart(productName);
 });
