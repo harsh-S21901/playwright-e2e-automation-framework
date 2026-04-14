@@ -1,5 +1,6 @@
 const { test, expect } = require("@playwright/test");
 const { LoginPage } = require("../pages/LoginPage");
+const users = require("../test-data/users.json");
 
 test.beforeEach(async ({ page }) => {
   await page.goto("https://www.saucedemo.com/");
@@ -8,7 +9,7 @@ test.beforeEach(async ({ page }) => {
 test("Valid Login", async ({ page }) => {
   const loginPage = new LoginPage(page);
 
-  await loginPage.login("standard_user", "secret_sauce");
+  await loginPage.login(users[0].username, users[0].password);
 
   await expect(page.locator(".title")).toHaveText("Products");
 });

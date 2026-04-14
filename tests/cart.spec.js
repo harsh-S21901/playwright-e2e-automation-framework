@@ -2,9 +2,7 @@ const { test, expect } = require("@playwright/test");
 const { LoginPage } = require("../pages/LoginPage");
 const { CartPage } = require("../pages/CartPage");
 
-test.only("User can add product to cart and verify it in cart", async ({
-  page,
-}) => {
+test("User can add product to cart and verify it in cart", async ({ page }) => {
   await page.goto("https://www.saucedemo.com/");
   const loginPage = new LoginPage(page);
   const cartPage = new CartPage(page);
